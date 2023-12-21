@@ -5,6 +5,10 @@ overwrite_original_rules = true
 
 # 设置分组标志位
 [[custom_groups]]
+name = "🚀 节点选择"
+type = "select"
+rule = ["[]✴️ 负载均衡","[]🎯 全球直连"]
+[[custom_groups]]
 name = "✴️ 负载均衡"
 type = "load-balance"
 rule = [".*"]
