@@ -41,7 +41,7 @@ type = "select"
 rule = ["[]REJECT","[]DIRECT"]
 
 [[custom_groups]]
-name = "🛑 全球拦截"
+name = "🛑 广告拦截"
 type = "select"
 rule = ["[]REJECT", "[]DIRECT"]
 
@@ -78,7 +78,35 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Downlo
 
 [[rulesets]]
 group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
 ruleset = "[]GEOIP,CN"
+
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,LAN"
+
+#拦截
+[[rulesets]]
+group = "🛑 广告拦截"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+
+[[rulesets]]
+group = "🍃 应用净化"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+
+
