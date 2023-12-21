@@ -60,8 +60,7 @@ rule = ["[]REJECT", "[]DIRECT"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]✴️ 负载均衡",
-"[]🎯 全球直连"]
+rule = ["[]✴️ 负载均衡","[]🎯 全球直连"]
 # 设置分组标志位
 
 
