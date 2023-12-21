@@ -69,6 +69,29 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
 
+#🌏 国内媒体
+[[rulesets]]
+group = "🌏 国内媒体"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+
+#🌏 国外媒体
+[[rulesets]]
+group = "🌏 国外媒体"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+
+#微软直连
+[[rulesets]]
+group = "Ⓜ️ 微软云盘"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
+
+[[rulesets]]
+group = "Ⓜ️ 微软Bing"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list"
+
+[[rulesets]]
+group = "Ⓜ️ 微软服务"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+
 # 直连
 [[rulesets]]
 group = "🎯 全球直连"
@@ -113,29 +136,6 @@ ruleset = "[]GEOIP,CN"
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,LAN"
-
-#微软直连
-[[rulesets]]
-group = "Ⓜ️ 微软服务"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
-
-[[rulesets]]
-group = "Ⓜ️ 微软Bing"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list"
-
-[[rulesets]]
-group = "Ⓜ️ 微软云盘"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
-
-#🌏 国内媒体
-[[rulesets]]
-group = "🌏 国内媒体"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
-
-#🌏 国外媒体
-[[rulesets]]
-group = "🌏 国外媒体"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
 
 [[rulesets]]
 group = "🐟 漏网之鱼"
