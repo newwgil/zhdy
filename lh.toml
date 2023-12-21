@@ -63,39 +63,30 @@ ruleset = "[]FINAL"
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,CN"
-
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,LAN"
