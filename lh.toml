@@ -18,6 +18,14 @@ name = "🎯 全球直连"
 type = "select"
 rule = ["[]DIRECT"]
 [[custom_groups]]
+name = "🌏 国内媒体"
+type = "select"
+rule = ["[]DIRECT"]
+[[custom_groups]]
+name = "🌏 国外媒体"
+type = "select"
+rule = ["✴️ 负载均衡"]
+[[custom_groups]]
 name = "Ⓜ️ 微软云盘"
 type = "select"
 rule = ["[]DIRECT"]
@@ -96,11 +104,19 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.l
 group = "Ⓜ️ 微软云盘"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
 
+#🌏 国内媒体
+[[rulesets]]
+group = "🌏 国内媒体"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+#🌏 国外媒体
+[[rulesets]]
+group = "🌏 国外媒体"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+
 #拦截
 [[rulesets]]
 group = "🛑 广告拦截"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-
 [[rulesets]]
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
