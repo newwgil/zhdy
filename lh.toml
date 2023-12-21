@@ -3,10 +3,82 @@ version = 1
 enable_rule_generator = true
 overwrite_original_rules = true
 
+# 设置分组标志位
 [[custom_groups]]
 name = "✴️ 负载均衡"
 type = "load-balance"
-rule = ["(^(?!.*(?i:SG|Singapore|新加坡|狮城|[^-]新)).*)"]
+rule = [".*"]
 interval = 120
 strategy = "round-robin"
 url = "http://www.gstatic.com/generate_204"
+interval = 100
+tolerance = 130
+
+[[custom_groups]]
+name = "🎯 全球直连"
+type = "select"
+rule = ["[]DIRECT"]
+
+[[custom_groups]]
+name = "Ⓜ️ 微软云盘"
+type = "select"
+rule = ["[]DIRECT"]
+
+[[custom_groups]]
+name = "Ⓜ️ 微软Bing"
+type = "select"
+rule = ["[]DIRECT"]
+
+[[custom_groups]]
+name = "Ⓜ️ 微软服务"
+type = "select"
+rule = ["[]DIRECT"]
+
+
+[[custom_groups]]
+name = "🍃 应用净化"
+type = "select"
+rule = ["[]REJECT","[]DIRECT"]
+
+[[custom_groups]]
+name = "🛑 全球拦截"
+type = "select"
+rule = ["[]REJECT", "[]DIRECT"]
+
+[[custom_groups]]
+name = "🐟 漏网之鱼"
+type = "select"
+rule = ["✴️ 负载均衡",
+"[]🎯 全球直连"]
+# 设置分组标志位
+
+
+# 设置规则标志位
+
+[[rulesets]]
+group = "🐟 漏网之鱼"
+ruleset = "[]FINAL"
+
+# 直连
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "[]GEOIP,CN"
+[[rulesets]]
+group = "🎯 全球直连"
+ruleset = "[]GEOIP,LAN"
