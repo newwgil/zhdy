@@ -11,8 +11,7 @@ rule = [".*"]
 interval = 120
 strategy = "round-robin"
 url = "http://www.gstatic.com/generate_204"
-interval = 100
-tolerance = 130
+tolerance = 50
 [[custom_groups]]
 name = "🎯 全球直连"
 type = "select"
