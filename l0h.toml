@@ -60,9 +60,14 @@ rule = ["[]✴️ 负载均衡","[]🎯 全球直连"]
 
 
 # 设置规则标志位
+#拦截
 [[rulesets]]
-group = "🐟 漏网之鱼"
-ruleset = "[]FINAL"
+group = "🛑 广告拦截"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+
+[[rulesets]]
+group = "🍃 应用净化"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
 
 # 直连
 [[rulesets]]
@@ -132,13 +137,7 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaM
 group = "🌏 国外媒体"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
 
-#拦截
 [[rulesets]]
-group = "🛑 广告拦截"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-
-[[rulesets]]
-group = "🍃 应用净化"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-
+group = "🐟 漏网之鱼"
+ruleset = "[]FINAL"
 
