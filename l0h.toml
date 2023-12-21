@@ -1,5 +1,5 @@
 version = 1
-[common]
+[custom]
 enable_rule_generator = true
 overwrite_original_rules = true
 
