@@ -2,7 +2,7 @@ version = 1
 [custom]
 enable_rule_generator = true
 overwrite_original_rules = true
-clash_rule_base = "https://raw.githubusercontent.com/zhongfly/clash-config/master/clash.yml"
+
 # 设置分组标志位
 [[custom_groups]]
 name = "🚀 节点选择"
