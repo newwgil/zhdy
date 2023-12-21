@@ -3,9 +3,6 @@ version = 1
 enable_rule_generator = true
 overwrite_original_rules = true
 
-add_emoji = true
-remove_old_emoji = true
-
 # 设置分组标志位
 [[custom_groups]]
 name = "✴️ 负载均衡"
@@ -70,7 +67,7 @@ ruleset = "[]FINAL"
 # 直连
 [[rulesets]]
 group = "🎯 全球直连"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
