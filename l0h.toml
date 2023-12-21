@@ -30,7 +30,7 @@ rule = ["[]DIRECT"]
 [[custom_groups]]
 name = "🌏 国外媒体"
 type = "select"
-rule = ["✴️ 负载均衡"]
+rule = ["[]✴️ 负载均衡"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软云盘"
@@ -60,7 +60,7 @@ rule = ["[]REJECT", "[]DIRECT"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["✴️ 负载均衡",
+rule = ["[]✴️ 负载均衡",
 "[]🎯 全球直连"]
 # 设置分组标志位
 
