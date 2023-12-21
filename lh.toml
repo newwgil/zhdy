@@ -85,6 +85,17 @@ ruleset = "[]GEOIP,CN"
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,LAN"
 
+#微软直连
+[[rulesets]]
+group = "Ⓜ️ 微软服务"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+[[rulesets]]
+group = "Ⓜ️ 微软Bing"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list"
+[[rulesets]]
+group = "Ⓜ️ 微软云盘"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
+
 #拦截
 [[rulesets]]
 group = "🛑 广告拦截"
