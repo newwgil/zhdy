@@ -7,7 +7,7 @@ overwrite_original_rules = true
 [[custom_groups]]
 name = "🚀 节点选择"
 type = "select"
-rule = ["[]✴️ 负载均衡","[]🎯 全球直连"]
+rule = ["[]✴️ 负载均衡","[]🎯 全球直连","[]DIRECT"]
 
 [[custom_groups]]
 name = "✴️ 负载均衡"
