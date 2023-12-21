@@ -3,6 +3,9 @@ version = 1
 enable_rule_generator = true
 overwrite_original_rules = true
 
+add_emoji = true
+remove_old_emoji = true
+
 # 设置分组标志位
 [[custom_groups]]
 name = "✴️ 负载均衡"
