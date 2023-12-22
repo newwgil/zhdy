@@ -5,11 +5,21 @@ overwrite_original_rules = true
 
 # 设置分组标志位
 [[custom_groups]]
-name = "✴️ 负载均衡"
+name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
+lazy: true
 interval = 120
 strategy = "round-robin"
+url = "http://www.gstatic.com/generate_204"
+
+[[custom_groups]]
+name = "✴️ 负载均衡-散列"
+type = "load-balance"
+rule = [".*"]
+lazy: true
+interval = 120
+strategy = "consistent-hashing"
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -25,7 +35,7 @@ rule = ["[]DIRECT"]
 [[custom_groups]]
 name = "🌏 国外媒体"
 type = "select"
-rule = ["[]✴️ 负载均衡"]
+rule = ["[]✴️ 负载均衡-轮询","✴️ 负载均衡-散列"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软云盘"
@@ -55,7 +65,7 @@ rule = ["[]REJECT", "[]DIRECT"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]✴️ 负载均衡","[]🎯 全球直连"]
+rule = ["[]✴️ 负载均衡-轮询","✴️ 负载均衡-散列","[]🎯 全球直连"]
 # 设置分组标志位
 
 
