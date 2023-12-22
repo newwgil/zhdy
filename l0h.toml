@@ -109,6 +109,10 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Micros
 # 直连
 [[rulesets]]
 group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/lh.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
 
 [[rulesets]]
@@ -138,10 +142,6 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Google
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
-
-[[rulesets]]
-group = "🎯 全球直连"
-ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/lh.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
