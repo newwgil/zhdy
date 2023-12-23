@@ -9,7 +9,7 @@ name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
 lazy = "true"
-interval = 120
+interval = 300
 strategy = "round-robin"
 url = "http://www.gstatic.com/generate_204"
 
@@ -18,7 +18,7 @@ name = "✴️ 负载均衡-散列"
 type = "load-balance"
 rule = [".*"]
 lazy = "true"
-interval = 120
+interval = 300
 strategy = "consistent-hashing"
 url = "http://www.gstatic.com/generate_204"
 
