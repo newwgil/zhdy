@@ -25,7 +25,7 @@ url = "http://www.gstatic.com/generate_204"
 [[custom_groups]]
 name = "🎯 全球直连"
 type = "select"
-rule = ["[]✴️ 负载均衡-轮询","[]✴️ 负载均衡-散列","[]DIRECT"]
+rule = ["[]DIRECT"]
 
 [[custom_groups]]
 name = "🌏 国内媒体"
