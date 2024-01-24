@@ -2,6 +2,9 @@ version = 1
 [custom]
 enable_rule_generator = true
 overwrite_original_rules = true
+proxy_config = "SYSTEM"
+proxy_ruleset = "SYSTEM"
+proxy_subscription = "SYSTEM"
 
 # 设置分组标志位
 [[custom_groups]]
