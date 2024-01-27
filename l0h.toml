@@ -43,7 +43,7 @@ rule = ["[]DIRECT"]
 [[custom_groups]]
 name = "🌏 国外媒体"
 type = "select"
-rule = ["[]♻️ 自动选择",[]✴️ 负载均衡-轮询","[]✴️ 负载均衡-散列"]
+rule = ["[]♻️ 自动选择","[]✴️ 负载均衡-轮询","[]✴️ 负载均衡-散列"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软云盘"
