@@ -54,12 +54,12 @@ rule = ["[]DIRECT"]
 [[custom_groups]]
 name = "🍃 应用净化"
 type = "select"
-rule = ["[]REJECT"]
+rule = ["[]REJECT","[]DIRECT"]
 
 [[custom_groups]]
 name = "🛑 广告拦截"
 type = "select"
-rule = ["[]REJECT"]
+rule = ["[]REJECT","[]DIRECT"]
 
 [[custom_groups]]
 name = "🐟 漏网之鱼"
