@@ -13,6 +13,15 @@ strategy = "round-robin"
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
+name = "✴️ 负载均衡-散列"
+type = "load-balance"
+rule = [".*"]
+lazy = "true"
+interval = 300
+strategy = "consistent-hashing"
+url = "http://www.gstatic.com/generate_204"
+
+[[custom_groups]]
 name = "🎯 全球直连"
 type = "select"
 rule = ["[]DIRECT"]
@@ -25,7 +34,7 @@ rule = ["[]🎯 全球直连"]
 [[custom_groups]]
 name = "🌏 国外媒体"
 type = "select"
-rule = ["[]✴️ 负载均衡-轮询"]
+rule = ["✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软云盘"
@@ -55,7 +64,7 @@ rule = ["[]REJECT","[]🎯 全球直连"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
+rule = ["✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
 # 设置分组标志位
 
 
