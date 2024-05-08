@@ -87,6 +87,10 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.
 [[rulesets]]
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/pbgg.list"
+[[rulesets]]
+group = "🍃 应用净化"
+ruleset = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/adobe.list"
+
 
 #🌏 国内媒体
 [[rulesets]]
