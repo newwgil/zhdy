@@ -79,9 +79,6 @@ rule = ["[]♻️ 自动选择","[]✴️ 负载均衡-散列","[]✴️ 负载�
 # 设置规则标志位
 #拦截
 [[rulesets]]
-group = "🍃 应用净化"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-[[rulesets]]
 group = "🛑 广告拦截"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
 [[rulesets]]
@@ -90,7 +87,9 @@ ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/pbgg.list"
 [[rulesets]]
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/adobe.list"
-
+[[rulesets]]
+group = "🍃 应用净化"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
 
 #🌏 国内媒体
 [[rulesets]]
