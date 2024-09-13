@@ -32,7 +32,7 @@ url = "http://www.gstatic.com/generate_204"
 [[custom_groups]]
 name = "🎯 全球直连"
 type = "select"
-rule = ["[]DIRECT"]
+rule = ["[]DIRECT","[]✴️ 负载均衡-轮询"]
 
 [[custom_groups]]
 name = "🌏 国内媒体"
