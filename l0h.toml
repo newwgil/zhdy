@@ -9,6 +9,7 @@ type = "url-test"
 rule = [".*"]
 lazy = "true"
 interval = 300
+timeout = 3
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -17,6 +18,7 @@ type = "fallback"
 rule = [".*"]
 lazy = "true"
 interval = 180
+timeout = 3
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -26,6 +28,7 @@ rule = [".*"]
 lazy = "true"
 interval = 180
 strategy = "round-robin"
+timeout = 3
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -35,6 +38,7 @@ rule = [".*"]
 lazy = "true"
 interval = 180
 strategy = "consistent-hashing"
+timeout = 3
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
