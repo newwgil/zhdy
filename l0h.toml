@@ -17,7 +17,7 @@ name = "🔯 故障转移"
 type = "fallback"
 rule = [".*"]
 lazy = "true"
-interval = 180
+interval = 90
 timeout = 3
 url = "http://www.gstatic.com/generate_204"
 
