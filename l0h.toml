@@ -53,16 +53,6 @@ type = "select"
 rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询"]
 
 [[custom_groups]]
-name = "Ⓜ️ 微软云盘"
-type = "select"
-rule = ["[]🎯 全球直连"]
-
-[[custom_groups]]
-name = "Ⓜ️ 微软Bing"
-type = "select"
-rule = ["[]🎯 全球直连"]
-
-[[custom_groups]]
 name = "Ⓜ️ 微软服务"
 type = "select"
 rule = ["[]🎯 全球直连"]
@@ -109,10 +99,10 @@ group = "🌏 国外媒体"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
 #微软直连
 [[rulesets]]
-group = "Ⓜ️ 微软云盘"
+group = "Ⓜ️ 微软服务"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
 [[rulesets]]
-group = "Ⓜ️ 微软Bing"
+group = "Ⓜ️ 微软服务"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list"
 [[rulesets]]
 group = "Ⓜ️ 微软服务"
