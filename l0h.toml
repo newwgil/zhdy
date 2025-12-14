@@ -12,11 +12,19 @@ interval = 300
 url = "http://www.gstatic.com/generate_204"
 
 [[custom_groups]]
+name = "🔯 故障转移"
+type = "fallback"
+rule = [".*"]
+lazy = "true"
+interval = 180
+url = "http://www.gstatic.com/generate_204"
+
+[[custom_groups]]
 name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
 lazy = "true"
-interval = 300
+interval = 180
 strategy = "round-robin"
 url = "http://www.gstatic.com/generate_204"
 
@@ -25,7 +33,7 @@ name = "✴️ 负载均衡-散列"
 type = "load-balance"
 rule = [".*"]
 lazy = "true"
-interval = 300
+interval = 180
 strategy = "consistent-hashing"
 url = "http://www.gstatic.com/generate_204"
 
@@ -72,7 +80,7 @@ rule = ["[]REJECT","[]🎯 全球直连"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]♻️ 自动选择","[]✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
+rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
 # 设置分组标志位
 
 
