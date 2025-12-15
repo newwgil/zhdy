@@ -83,6 +83,10 @@ rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-散
 [[rulesets]]
 group = "🛑 广告拦截"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+
+[[rulesets]]
+group = "🛑 广告拦截"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list"
 [[rulesets]]
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/pbgg.list"
