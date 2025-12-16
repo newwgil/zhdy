@@ -10,7 +10,7 @@ rule = [".*"]
 lazy = true
 interval = 300
 tolerance = 50
-url = "http://cp.cloudflare.com/generate_204"
+url = "https://www.gstatic.com/generate_204"
 
 [[custom_groups]]
 name = "✴️ 负载均衡-轮询"
@@ -19,7 +19,7 @@ rule = [".*"]
 lazy = true
 interval = 180
 strategy = "round-robin"
-url = "http://cp.cloudflare.com/generate_204"
+url = "https://www.gstatic.com/generate_204"
 
 [[custom_groups]]
 name = "🎯 全球直连"
