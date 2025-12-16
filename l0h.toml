@@ -7,39 +7,39 @@ overwrite_original_rules = true
 name = "♻️ 自动选择"
 type = "url-test"
 rule = [".*"]
-lazy = "true"
+lazy = true
 interval = 300
-timeout = 3
-url = "http://www.gstatic.com/generate_204"
+timeout = 2
+url = "http://cp.cloudflare.com/generate_204"
 
 [[custom_groups]]
 name = "🔯 故障转移"
 type = "fallback"
 rule = [".*"]
-lazy = "true"
-interval = 90
-timeout = 3
-url = "http://www.gstatic.com/generate_204"
+lazy = true
+interval = 60
+timeout = 2
+url = "http://cp.cloudflare.com/generate_204"
 
 [[custom_groups]]
 name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
-lazy = "true"
+lazy = true
 interval = 180
 strategy = "round-robin"
-timeout = 3
-url = "http://www.gstatic.com/generate_204"
+timeout = 2
+url = "http://cp.cloudflare.com/generate_204"
 
 [[custom_groups]]
 name = "✴️ 负载均衡-散列"
 type = "load-balance"
 rule = [".*"]
-lazy = "true"
+lazy = true
 interval = 180
 strategy = "consistent-hashing"
-timeout = 3
-url = "http://www.gstatic.com/generate_204"
+timeout = 2
+url = "http://cp.cloudflare.com/generate_204"
 
 [[custom_groups]]
 name = "🎯 全球直连"
@@ -75,17 +75,14 @@ rule = ["[]REJECT","[]🎯 全球直连"]
 name = "🐟 漏网之鱼"
 type = "select"
 rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-散列","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
-# 设置分组标志位
-
 
 # 设置规则标志位
-#拦截
 [[rulesets]]
 group = "🛑 广告拦截"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
 [[rulesets]]
 group = "🛑 广告拦截"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list"
 [[rulesets]]
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/pbgg.list"
@@ -96,15 +93,17 @@ ruleset = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/adobe.list
 group = "🍃 应用净化"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
 
-#🌏 国内媒体
+# 国内媒体
 [[rulesets]]
 group = "🌏 国内媒体"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
-#🌏 国外媒体
+
+# 国外媒体
 [[rulesets]]
 group = "🌏 国外媒体"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
-#微软直连
+
+# 微软直连
 [[rulesets]]
 group = "Ⓜ️ 微软服务"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list"
@@ -114,7 +113,8 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.l
 [[rulesets]]
 group = "Ⓜ️ 微软服务"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
-# 直连
+
+# 全球直连
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/newwgil/zhdy/main/lh.list"
@@ -148,7 +148,8 @@ ruleset = "[]GEOIP,CN"
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "[]GEOIP,LAN"
+
+# 漏网之鱼
 [[rulesets]]
 group = "🐟 漏网之鱼"
 ruleset = "[]FINAL"
-
