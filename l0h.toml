@@ -8,7 +8,7 @@ name = "♻️ 自动选择"
 type = "url-test"
 rule = [".*"]
 lazy = true
-interval = 180
+interval = 300        # 保持 300 秒，避免频繁测速
 tolerance = 50
 url = "https://www.gstatic.com/generate_204"
 
@@ -17,7 +17,7 @@ name = "🔯 故障转移"
 type = "fallback"
 rule = [".*"]
 lazy = true
-interval = 30
+interval = 30         # 缩短到 30 秒，更快发现节点挂掉
 url = "https://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -25,7 +25,7 @@ name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
 lazy = true
-interval = 120
+interval = 120        # 改为 120 秒，保证健康检查及时
 strategy = "round-robin"
 url = "https://www.gstatic.com/generate_204"
 
@@ -33,6 +33,11 @@ url = "https://www.gstatic.com/generate_204"
 name = "🎯 全球直连"
 type = "select"
 rule = ["[]DIRECT"]
+
+[[custom_groups]]
+name = "📥 下载专用"
+type = "select"
+rule = ["[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
 
 [[custom_groups]]
 name = "🌏 国内媒体"
@@ -62,7 +67,7 @@ rule = ["[]REJECT","[]🎯 全球直连"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
+rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-轮询","[]📥 下载专用","[]🎯 全球直连"]
 
 # 设置规则标志位
 [[rulesets]]
@@ -90,6 +95,14 @@ ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaM
 [[rulesets]]
 group = "🌏 国外媒体"
 ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+
+# 下载专用
+[[rulesets]]
+group = "📥 下载专用"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+[[rulesets]]
+group = "📥 下载专用"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
 
 # 微软直连
 [[rulesets]]
