@@ -8,8 +8,16 @@ name = "♻️ 自动选择"
 type = "url-test"
 rule = [".*"]
 lazy = true
-interval = 300
+interval = 180
 tolerance = 50
+url = "https://www.gstatic.com/generate_204"
+
+[[custom_groups]]
+name = "🔯 故障转移"
+type = "fallback"
+rule = [".*"]
+lazy = true
+interval = 30
 url = "https://www.gstatic.com/generate_204"
 
 [[custom_groups]]
@@ -17,7 +25,7 @@ name = "✴️ 负载均衡-轮询"
 type = "load-balance"
 rule = [".*"]
 lazy = true
-interval = 180
+interval = 120
 strategy = "round-robin"
 url = "https://www.gstatic.com/generate_204"
 
@@ -34,7 +42,7 @@ rule = ["[]🎯 全球直连"]
 [[custom_groups]]
 name = "🌏 国外媒体"
 type = "select"
-rule = ["[]♻️ 自动选择","[]✴️ 负载均衡-轮询"]
+rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-轮询"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软服务"
@@ -54,7 +62,7 @@ rule = ["[]REJECT","[]🎯 全球直连"]
 [[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-rule = ["[]♻️ 自动选择","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
+rule = ["[]♻️ 自动选择","[]🔯 故障转移","[]✴️ 负载均衡-轮询","[]🎯 全球直连"]
 
 # 设置规则标志位
 [[rulesets]]
